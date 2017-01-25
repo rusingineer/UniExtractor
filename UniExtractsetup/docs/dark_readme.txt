@@ -1,0 +1,1 @@
+Converts a Windows Installer database into a set of WiX source files. This tool is very useful for getting all your authoring into a WiX source file when you have an existing Windows Installer database. However, you will then need to tweak this file to accomodate different languages and breaking things into fragments.

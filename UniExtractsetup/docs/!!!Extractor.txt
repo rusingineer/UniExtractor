@@ -1,0 +1,71 @@
+7-Zip 16.03, модифицированный для извлечения скрипта NSIS (7z.exe, 7z.dll) http://www.7-zip.org/
+Arc-5.21j (arc.exe) http://gnuwin32.sourceforge.net/packages/arc.htm
+Arj for Win32, version 3.10 (arg.exe) http://arj.sourceforge.net/
+AspackDie 1.41 & 2.2 (AspackDie.exe, AspackDie22.exe, ForceLibrary.dll)
+;Booz 2.0 - Zoo Extractor/Lister (Booz.уxe)  ftp://ftp.elf.stuba.sk/pub/pc/pack/ заменен на unzoo
+bootimg Update Date: 20150624 (bootimg.exe) http://forum.xda-developers.com/redmi-1s/general/guide-unpack-repack-kernel-t2908458 ; https://github.com/cofface/android_bootimg
+CDIrip 0.6.3 by DeXT/Lawrence Williams (cdirip.exe)
+ConvertLIT 1.8 (clit.exe) http://www.convertlit.com/
+cmdTotal 2.02 (cmdTotal.exe) http://wincmd.ru/plugring/cmdtotal.html
+DAA2ISO / GBI2ISO 0.1.7e (daa2iso.exe) http://aluigi.org/mytoolz.htm#daa2iso
+Windows Installer XML Toolset Decompiler version 3.10.3.3007 (папка wix с файлами dark.exe, wix.dll и winterop.dll) http://wixtoolset.org/releases/
+DBX 1.0 beta9 - плагин к ТC (dbxplug.wcx) http://www.totalcmd.net/plugring/dbx.html ; http://en.totalcmd.pl/download/wcx/eml/dbx
+Detect It Easy 1.01 (папка die) http://ntinfo.biz/
+DGCA Digital G Codec Archiver 1.10 (dgcac.exe) http://www.emit.jp/dgca/dgca_e.html
+EnigmaVBUnpacker v0.35 (EnigmaVBUnpacker.exe) https://forum.tuts4you.com/topic/35554-static-enigma-virtual-box-unpacker/ ; http://lifeinhex.com
+E_WISE от 2002.07.01 (E_WISE.ini, E_WISE_W.exe) http://kannegieser.net/~veit/programm/index_e.htm
+Exeinfo PE v0.0.4.4 - 962 + 50 signatures (папка exeinfope.exe) www.exeinfo.xn.pl
+Expand 6.1.7600.16385 (Expand.exe, Dpx.dll, Msdelta.dll, Mspatcha.dll) Microsoft Windоws AIK
+Aladdin Stuffit Expander 6.0 (Expander.exe, stuffit5.engine-5.1.dll) ftp://ftp.elf.stuba.sk/pub/pc/pack/ (Alex60.Exe)
+extractMHT 1.0 (extractMHT.exe)  https://www.legroom.net/software/extractmht
+h4sh3m Virtual Packages Extractor 1.1 (Extractor.exe) http://hashem20.persiangig.com/crack%20tools/Extractor.rar
+HELPDECO 2.1 (helpdeco.exe) http://freecode.com/projects/helpdeco
+Wise Unpacker 0.91a (бывший Hwun - Heuristic Wise-Setup Unpacker) (WUN.exe) http://www.cnblogs.com/icebird/archive/2006/07/03/wiseunpacker.html
+i3comp - InstallShield File Compressor version 3.00.062 for Microsoft Windows 95 (i3comp.exe)
+i5comp v2.01 (i5comp.exe, ZD50149.DLL, ZD55131.DLL)
+i6comp v0.3b (2011 г.) (i6comp.exe)
+innounp version 0.46 (innounp.exe) http://innounp.sourceforge.net/
+InstallExplorer 0.9.2 - плагин к ТC (InstExpl.dll, InstExpl.wcx, папка Unp) http://wincmd.ru/plugring/installexplorer.html
+Iso 1.7.9 - плагин к ТC (iso.wcx) http://wincmd.ru/plugring/iso64.html http://www.ghisler.com/plugins.htm
+IsXunpack - InstallShield (by one exe-file) Unpacker v-0.99 (IsXunpack.exe) http://forum.exetools.com/showthread.php?p=17394
+;Kgb Archiver 1.2.1.24 (Kgb_arch_decompress.exe) https://sourceforge.net/projects/kgbarchiver
+KGB Archiver 2 Technology Preview console 1.0.0.2 (папка kgb) https://sourceforge.net/projects/kgbarchiver
+Less MSIerables (lessmsi) 1.4 (lessmsi.exe, lessmsi.core.dll, lessmsi.exe.config, libmspackn.dll, mspack.dll, wix.dll, wixcab.dll) http://lessmsi.activescott.com/
+lzop 1.03 (lzop.exe) http://www.lzop.org/
+MhtUnPack 2.0 - плагин к ТC (заменяет старый плагин Mht Unpacker 0.1.1, для обратной совместимости оставлено старое имя MHTUnp.wcx) (MHTUnp.wcx) http://wincmd.ru/plugring/MhtUnPack.html
+msi 1.2.1 - плагин к ТC (msi.wcx) http://wincmd.ru/plugring/msi.html
+MSI Unpacker from JSWare (jsMSIx.exe) http://www.jsware.net/jsware/msicode.php5#unpackx
+Simple "One-Click" MSI Unpacker Script Last update: April, 2014 (моя модификация оригинального скрипта) (MSIUnPack.vbs, jcabxmsi.exe) http://www.jsware.net/jsware/msicode.php5#unplin
+MsiX 1.0 (MsiX.exe) http://blogs.msdn.com/heaths/archive/2006/04/07/571138.aspx
+mtee 2.21 (mtee.exe) http://sourceforge.net/projects/mtee
+Nbgextract 1.0  http://forum.xda-developers.com/showthread.php?t=289830
+pdfdetach 3.04 (pdfdetach.exe) http://www.foolabs.com/xpdf/
+pdfimages 3.04 (pdfimages.exe) http://www.foolabs.com/xpdf/
+pdftotext 3.04 (pdftotext.exe) http://www.foolabs.com/xpdf/
+Pdunsis 1.00 плагин к ТC (PDunSIS.wcx) http://wincmd.ru/plugring/unsis.html
+Pea 0.55 (pea.exe) http://peazip.sourceforge.net/
+Pe Identifier V0.95  (PEiD.exe, userdb.txt)
+Reflexive Arcade Installer Unwrapper 0.1a (RAIU.exe) http://www.legroom.net/node/539
+SfxSplit 1.0.2.1020 - Sfx Splitter (SfxSplit)
+Smart Install Maker unpacker 1.0 (sim_unpacker.exe) http://www.nullsecurity.org/tools
+Stix - версия для Windows (не нужен Wdosxle - удален, для обратной совместимости оставлено старое имя Stix_d.Exe) (STIX_D.exe) http://dml.compkaluga.ru/forum/index.php?showtopic=54199
+swfextract 0.9.2 (swfextract.exe) http://www.swftools.org/										
+;tee 1.9.4 (tee.exe) http://unxutils.sourceforge.net/
+TotalObserver 1.2.0 плагин к ТC (TotalObserver.wcx, observer.ini, папка modules) http://wincmd.ru/plugring/totalobserver.html Модули http://sourceforge.net/projects/far-observer/ 1.11.2
+Total SQX 2.11 плагин к ТC (TotalSQX.wcx, папка x86) http://wincmd.ru/plugring/totalsqx.html
+TrID V2.24 (trid.exe, TrIDDefs.TRD) http://mark0.net/soft-trid-e.html
+TrIDDefs.TRD (6370 типов файлов, 15.01.16)
+Uharc02 (UHARC02.exe)
+Uharc04 (UHARC04.exe)
+Uharc06 (UNUHARC06.exe)
+Freearc 0.67 alpha (unarc.exe) http://freearc.org/ru/Download.aspx
+UIF2ISO 0.1.7c (uif2iso.exe) http://aluigi.org/mytoolz.htm#uif2iso
+unalz v0.64 (unalz.exe) http://www.kipple.pe.kr
+Unlzx Version: 2.16 (unlzx.exe) http://xavprods.free.fr/lzx/
+;Unrar 5.21 (UnRAR.exe) http://www.rarlabs.com/ - удалил (заменен на 7.zip)
+unshield v1.3 by David Eriksson 18.01.2016 (unshield.exe) https://github.com/twogood/unshield http://forum.ru-board.com/topic.cgi?forum=5&topic=20420&start=1460#7
+Unzip 6.0 (Unzip.exe) http://www.info-zip.org/pub/infozip/UnZip.html
+Upx 3.91w (upx.exe) http://upx.sourceforge.net/
+Uudeview Version 0.5.20 (uudeview.exe) http://www.fpx.de/fp/Software/UUDeview/
+Xace 2.6 (xace.exe) http://www.winace.com/
+ZPAQ 7.14 (zpaq.exe) http://mattmahoney.net/dc/zpaq.html

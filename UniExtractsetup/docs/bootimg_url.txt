@@ -1,0 +1,2 @@
+http://forum.xda-developers.com/redmi-1s/general/guide-unpack-repack-kernel-t2908458
+https://github.com/cofface/android_bootimg

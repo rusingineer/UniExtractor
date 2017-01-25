@@ -1,0 +1,214 @@
+﻿; Russian
+; Русский
+;!@Install@!UTF-8:Language:1049!
+SetEnvironment="Utilities=Утилиты"
+SetEnvironment="NameIni=lang\\Russian.ini"
+SetEnvironment="TitleBegin=Деинсталляция %DisplayName%"
+SetEnvironment="PromptBegin=Вы действительно хотите удалить %DisplayName% и все компоненты программы?"
+SetEnvironment="PromptEnd=Программа %DisplayName% удалена."
+
+BeginPrompt="Сейчас будет произведена установка %NameProg% %ProgVer%.\nЗакройте все запущенные копии %NameProg%,\nвыберите папку установки и нажмите кнопку \"ОК\""
+ExtractTitle="Установка %NameProg% %ProgVer%"
+ExtractDialogText="Распаковка файлов..."
+FinishMessage="Установка %NameProg% %ProgVer% завершена!"
+SetEnvironment="EXTRACT_FILES=UniExtract &файлы"
+SetEnvironment="EXTRACT_HERE=UniExtract &здесь"
+SetEnvironment="EXTRACT_SUB=UniExtract в &папку"
+SetEnvironment="language=Russian"
+;!@InstallEnd@:Language:1049!
+
+; Arabic
+;!@Install@!UTF-8:Language:1025!
+SetEnvironment="NameIni=lang\\Arabic.ini"
+;!@InstallEnd@:Language:1025!
+
+; Armenian
+;!@Install@!UTF-8:Language:1067!
+SetEnvironment="NameIni=lang\\Armenian.ini"
+;!@InstallEnd@:Language:1067!
+
+; Bulgarian
+; Български
+;!@Install@!UTF-8:Language:1026!
+SetEnvironment="Utilities=Утилити"
+SetEnvironment="NameIni=lang\\Bulgarian.ini"
+SetEnvironment="TitleBegin=Деинсталация на %DisplayName%"
+SetEnvironment="PromptBegin=Действително ли желаете да изтриете %DisplayName% и всички компоненти на програмата?"
+SetEnvironment="PromptEnd=Програмата %DisplayName% е изтрита."
+
+BeginPrompt="Сега ще се инсталира %NameProg% %ProgVer%.\nЗатворете всички стартирани копия на %NameProg%,\nизберете папка за инсталиране и натиснете \"ОК\""
+ExtractDialogText="Разопаковка на файловете..."
+FinishMessage="Инсталирането на %NameProg% %ProgVer% завърши!"
+SetEnvironment="EXTRACT_FILES=UniExtract &файлове"
+SetEnvironment="EXTRACT_HERE=UniExtract &тук"
+SetEnvironment="EXTRACT_SUB=UniExtract в &папка"
+SetEnvironment="language=Bulgarian"
+;!@InstallEnd@:Language:1026!
+
+; Chinese (Simplified)
+; 中文
+;!@Install@!UTF-8:Language:2052!
+SetEnvironment="Utilities=工具集"
+SetEnvironment="NameIni=lang\\Chinese (Simplified).ini"
+SetEnvironment="TitleBegin=卸载 %DisplayName%"
+SetEnvironment="PromptBegin=你确定要卸载 %DisplayName% 从你的电脑上?"
+SetEnvironment="PromptEnd=%DisplayName% 已经成功卸载."
+
+BeginPrompt="正在安装 %NameProg% %ProgVer%.\n关闭所有运行中的副本 %NameProg%,\n选择目标文件夹并点击 \"是\""
+ExtractTitle="正安装 %NameProg% %ProgVer%"
+ExtractDialogText="提取文件中..."
+FinishMessage="安装 %NameProg% %ProgVer% 完成!"
+SetEnvironment="EXTRACT_FILES=提取文件(&F)"
+SetEnvironment="EXTRACT_HERE=提取到这里(&H)"
+SetEnvironment="EXTRACT_SUB=提取到子目录(&H)"
+SetEnvironment="language=Chinese (Simplified)"
+;!@InstallEnd@:Language:2052!
+
+; Chinese (Traditional)
+;!@Install@!UTF-8:Language:1028!
+SetEnvironment="NameIni=lang\\Chinese (Traditional).ini"
+;!@InstallEnd@:Language:1028!
+
+; Croatian
+;!@Install@!UTF-8:Language:1050!
+SetEnvironment="NameIni=lang\\Croatian.ini"
+;!@InstallEnd@:Language:1050!
+
+; Czech
+;!@Install@!UTF-8:Language:1029!
+SetEnvironment="NameIni=lang\\Czech.ini"
+;!@InstallEnd@:Language:1029!
+
+; Dutch
+;!@Install@!UTF-8:Language:1043!
+SetEnvironment="NameIni=lang\\Dutch.ini"
+;!@InstallEnd@:Language:1043!
+
+; Finnish
+;!@Install@!UTF-8:Language:1035!
+SetEnvironment="NameIni=lang\\Finnish.ini"
+;!@InstallEnd@:Language:1035!
+
+; French
+;!@Install@!UTF-8:Language:1036!
+SetEnvironment="NameIni=lang\\French.ini"
+;!@InstallEnd@:Language:1036!
+
+; German
+;!@Install@!UTF-8:Language:1031!
+SetEnvironment="NameIni=lang\\German.ini"
+;!@InstallEnd@:Language:1031!
+
+; Greek
+;!@Install@!UTF-8:Language:1032!
+SetEnvironment="NameIni=lang\\Greek.ini"
+;!@InstallEnd@:Language:1032!
+
+; Hungarian
+;!@Install@!UTF-8:Language:1038!
+SetEnvironment="NameIni=lang\\Hungarian.ini"
+;!@InstallEnd@:Language:1038!
+
+; Italian
+;!@Install@!UTF-8:Language:1040!
+SetEnvironment="NameIni=lang\\Italian.ini"
+;!@InstallEnd@:Language:1040!
+
+; Japanese
+;!@Install@!UTF-8:Language:1041!
+SetEnvironment="NameIni=lang\\Japanese.ini"
+;!@InstallEnd@:Language:1041!
+
+; Korean
+;!@Install@!UTF-8:Language:1042!
+SetEnvironment="NameIni=lang\\Korean.ini"
+;!@InstallEnd@:Language:1042!
+
+; Persian (Farsi)
+;!@Install@!UTF-8:Language:1065!
+SetEnvironment="NameIni=lang\\Persian (Farsi).ini"
+;!@InstallEnd@:Language:1065!
+
+; Polish
+;!@Install@!UTF-8:Language:1045!
+SetEnvironment="NameIni=lang\\Polish.ini"
+;!@InstallEnd@:Language:1045!
+
+; Portuguese
+;!@Install@!UTF-8:Language:2070!
+SetEnvironment="NameIni=lang\\Portuguese.ini"
+;!@InstallEnd@:Language:2070!
+
+; Portuguese (Brazilian)
+;!@Install@!UTF-8:Language:1046!
+SetEnvironment="NameIni=lang\\Portuguese (Brazilian).ini"
+;!@InstallEnd@:Language:1046!
+
+; Romanian
+;!@Install@!UTF-8:Language:1048!
+SetEnvironment="NameIni=lang\\Romanian.ini"
+;!@InstallEnd@:Language:1048!
+
+; Serbian
+;!@Install@!UTF-8:Language:2074!
+SetEnvironment="NameIni=lang\\Serbian.ini"
+;!@InstallEnd@:Language:2074!
+
+; Slovak
+;!@Install@!UTF-8:Language:1051!
+SetEnvironment="NameIni=lang\\Slovak.ini"
+;!@InstallEnd@:Language:1051!
+
+; Spanish
+;!@Install@!UTF-8:Language:3082!
+SetEnvironment="NameIni=lang\\Spanish.ini"
+;!@InstallEnd@:Language:3082!
+
+; Swedish
+;!@Install@!UTF-8:Language:1053!
+SetEnvironment="NameIni=lang\\Swedish.ini"
+;!@InstallEnd@:Language:1053!
+
+; Taiwanese
+;!@Install@!UTF-8:Language:1028!
+SetEnvironment="NameIni=lang\\Taiwanese.ini"
+;!@InstallEnd@:Language:1028!
+
+; Thai
+;!@Install@!UTF-8:Language:1054!
+SetEnvironment="NameIni=lang\\Thai.ini"
+;!@InstallEnd@:Language:1054!
+
+; Turkish
+;!@Install@!UTF-8:Language:1055!
+SetEnvironment="NameIni=lang\\Turkish.ini"
+;!@InstallEnd@:Language:1055!
+
+; Ukrainian
+; Український
+;!@Install@!UTF-8:Language:1058!
+SetEnvironment="Utilities=Утиліти" 
+SetEnvironment="NameIni=lang\\Ukrainian.ini" 
+SetEnvironment="TitleBegin=Деінсталяція %DisplayName%" 
+SetEnvironment="PromptBegin=Ви дійсно бажаєте видалити %DisplayName% та всі компоненти програми?" 
+SetEnvironment="PromptEnd=Програму %DisplayName% видалено." 
+
+BeginPrompt="Зараз буде встановлено %NameProg% %ProgVer%.\nЗакрийте всі запущені копії %NameProg%,\nоберіть теку встановлення та натисніть кнопку \"ОК\"" 
+ExtractTitle="Встановлення %NameProg% %ProgVer%" 
+ExtractDialogText="Розпакування файлів..." 
+FinishMessage="Встановлення %NameProg% %ProgVer% завершено!" 
+SetEnvironment="EXTRACT_FILES=UniExtract &файли" 
+SetEnvironment="EXTRACT_HERE=UniExtract &тут" 
+SetEnvironment="EXTRACT_SUB=UniExtract в &теку" 
+SetEnvironment="language=Ukrainian"
+;!@InstallEnd@:Language:1058!
+
+; Valencian (Catalan)
+;!@Install@!UTF-8:Language:1027!
+SetEnvironment="NameIni=lang\\Valencian (Catalan).ini"
+;!@InstallEnd@:Language:1027!
+
+; Vietnamese
+;!@Install@!UTF-8:Language:1066!
+SetEnvironment="NameIni=lang\\Vietnamese.ini"
+;!@InstallEnd@:Language:1066!

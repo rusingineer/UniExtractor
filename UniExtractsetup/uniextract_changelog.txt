@@ -1,0 +1,566 @@
+1.6.1.1022 (31/10/2016) mod by koros aka ya158
+1. Исправлена ошибка (возникала при попытке распаковать файлы, упакованные ASPack-ом)
+2. Fixed swf extraction ignoring some images and sounds (исправлена ошибка пропуска некоторых изображений и звуков из swf) https://github.com/Bioruebe/UniExtract2/commit/eaafbf1d64e0d9e95c486a9a51c8bc2a2549e7c7
+3. Изменен GUI так, чтобы кнопки не налезали на границу окна.
+
+1.6.1.1021 (18/10/2016) mod by koros aka ya158
+1. Исправлена ошибка (не сохранялись настройки, если была выбрана не существующая папка для сохранения логов).
+2. Исправлена ошибка (не сохранялось имя папки для сохранения логов).
+3. Обновлен 7-zip до версии 16.04, модифицированный для извлечения скрипта NSIS (спасибо pasynok)
+4. Обновлен перевод Bulgarian (Български)
+5. Обновлен перевод Ukranian (Український)
+6. Добавлено: Распаковка файлов PDF (Adobe Portable Document Format) с помощью утилит pdfdetach, pdfimages и pdftotext. Такие файлы  определяются по расширению pdf, а также утилитой TrID по фразе '(.PDF) Adobe Portable Document Format', утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'PDF'.
+7. Обновлен Exeinfo PE до версии v0.0.4.4 - 962 + 50 signatures от 09.09.2016
+
+1.6.1.1020 (30/09/2016) mod by koros aka ya158
+Изменения навеянные сборкой от Bioruebe https://github.com/Bioruebe/UniExtract2
+1. При распаковке файла без расширения теперь предлагается распаковать его в папку с именем исходного файла, к которому добавлено "_TERM_UNPackED" (см. текущий языковой файл).
+2. Добавлено создание расширенного лога. Сохранять или не сохранять расширенный лог, а также место сохранения такого лога, можно выбрать из меню Настройки. Также в этом меню можно выбрать сохранять ли расширенный лог всегда или только при анализе/распаковке файлов.
+3. Изменена обработка запаролленых файлов. Теперь вначале проверяются пароли из файла passwords.txt, находящегося в папке Universal Extractor-а. Если ни один из них не подходит, то вывадится окно с предложением ввести пароль. Если введеный пароль не подходит то окно выводится сснова. Если в этом окне нажать кнопку "Cancel", то выводится сообщение о невозможности распаковки и Universal Extractor прекращает свою работу.
+Также в меню Настройки добавлен пункт "Сохранять пароль в списке паролей", позволяющие сохранить введенный пароль, с помощью которого удалось распаковать запаролленыый файл, в файл passwords.txt.
+В комплект инсталлятора Universal Extractor-а входит файл SamplePasswords.txt со стандарьными паролями, принятыми на форумах ruboard и SamLab. Если при инсталляции в папке установки не присутствует файл passwords.txt, то SamplePasswords.txt переименовывается в passwords.txt, иначе SamplePasswords.txt удаляется.
+4. Добавлена обработка файлов, содержащих Юникодные символы в имени или в пути. Такие файлы перемещаются/копируются в папку %Temp% и обрабатываются в ней. 
+5. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на WinAce по фразе 'WinAce / SFX Factory'.
+6. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на Caphyon Advanced Installer по фразе 'Advanced Installer'.
+7. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на FreeArc по фразе 'FreeArc'.
+8. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на файл .xz по фразе 'XZ compressed data', а при анализе утилитой TrID по фразе 'xz container'.
+9. Добавлено: При анализе EXE-файла утилитой TrID теперь идет проверка на файл .zpaq по фразе 'ZPAQ compressed archive'.
+10. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на файл .dmg по фразе '.dmg  Mac OS', а при анализе утилитой TrID по фразе 'Disk Image (Macintosh)'.
+11. Добавлено: При анализе EXE-файла утилитами Exeinfo PE, Detect-It-Easy, PEiD теперь идет проверка на файл .isz по фразе 'ISZ', а при анализе утилитой TrID по фразе 'ISo Zipped format'.
+12. Добавлено: Распаковка файлов созданных Excelsior Installer. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'Excelsior Installer' и распаковывается методом запуска исходного файла с ключами /batch /no-reg /no-postinstall /dest.
+13. Добавлено: Распаковка файлов созданных Smart Install Maker. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'Smart Install Maker' и распаковывается с помощью Smart Install Maker unpacker 1.0.
+14. Добавлено: Распаковка файлов Android boot image. Определяется анализаторами по фразе 'Android boot image' и распаковывается с помощью запуска исходного файла с ключом --unpack-bootimg.
+15. Добавлено: Распаковка архивов ALZip. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе '.ALZ  ALZip' и утилитой TrID по фразе 'ALZip compressed archive' и распаковывается с помощью unalz v0.64.
+16. Добавлено: Распаковка файлов Enigma Virtual Box. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразам 'Enigma Virtual Box' и распаковывается с помощью EnigmaVBUnpacker v0.35.
+17. Добавлено: Распаковка файлов SQX SFX. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'Sqx' и распаковывается с помощью плагина TotalSQX.
+18. Добавлено: Распаковка файлов ThinApp/Thinstall. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразам 'ThinyApp Packager', 'Thinstall' или 'VMware ThinApp' и распаковывается с помощью h4sh3m Virtual Apps Dependency Extractor.
+19. Добавлено: Распаковка файлов Microsoft SFX CAB. Определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'Microsoft SFX CAB' и распаковывается с помощью 7-zip.
+20. Добавлено: Распаковка файлов Digital G Codec Archiver. Определяется утилитой TrID по фразе 'DGCA Digital G Codec Archiver', утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'DGCA' и распаковывается с помощью dgcac.exe (данная утилита не дает возможности распаковать запароленный архив, если в пароле присутствуют пробелы).
+21. Добавлено: Распаковка SWF-файлов. Определяется утилитой TrID по фразе 'Macromedia Flash Player', утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'SWF' и распаковывается с помощью swfextract.exe.
+22. Добавлено: Распаковка файлов, которые определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'InstallAware' с помощью 7-zip.
+23. Добавлено: Распаковка файлов, которые определяется утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразе 'WiX Installer' с помощью Windows Installer XML Toolset Decompile.
+24. Добавлено: Распаковка образов дисков DAA (Direct Access Archive) и GBI (gBurner Images), созданный программой PowerISO и программой gBurner путем преобразования в .iso с помощью утилиты daa2iso. Такие файлы  определяются утилитой TrID по фразе 'PowerISO Direct-Access-Archive' или 'gBurner Image' и утилитами Exeinfo PE, Detect-It-Easy, PEiD по фразам 'PowerISO Direct-Access-Archive' и 'GBI'.
+25. Добавлено: Распаковка образов дисков UIF (Universal Image Format), созданный программой MagicISO путем преобразования в .iso с помощью утилиты uif2iso. Такие файлы  определяются по расширению uif, а также утилитой TrID по фразе 'Magic ISO Universal Image Format'.
+26. Изменено: При анализе файла RPM Linux Package утилитой TrID теперь идет проверка по фразе '(.RPM) RPM Package' вместо 'RPM Linux Package'. 
+27. Добавлена проверка раздела реестра HKEY_CURRENT_USER\Software\ExEi-pe до работы утилиты Exeinfo PE. Если данный раздел отсутствует до запуска Exeinfo PE, то после работы Exeinfo PE он удаляется. Если этот раздл есть в реестре, то после работы Universal Extractor-а все значения параметров этого раздела восстанавливаются.
+28. Обновлен Exeinfo PE до версии v0.0.4.4 - 962 + 50 signatures. В новой версии добавлена возможность вывода в лог-файл информации из поля "Инфа ламерам-Подсказка-Инфа по распаковке", а также информация, получаемая при использовании внешней базы данных из userdb.txt. Это теперь используется в Universal Extractor-е. Также на время работы Universal Extractor-а принедительно включеется "Ignore EXE errors".
+29. Заменен распаковщик архивов KGB на KGB Archiver 2 Technology Preview console 1.0.0.2.
+30. Заменена распаковка файлов arj с помощью arj.exe на распаковку с помощью 7-zip.
+31. Заменен Simple "One-Click" MSI Unpacker Script Last update: April, 2014 (моя модификация оригинального скрипта) (MSIUnPack.vbs, jcabxmsi.exe) на MSI Unpacker from JSWare (Last update: April, 2014) (jsMSIx.exe)
+32. Заменена утилита tee на утилиту mtee 2.21.
+33. Обновлен 7-zip до версии 16.03, модифицированный для извлечения скрипта NSIS (спасибо pasynok)
+34. Обновлен CDIrip до версии 0.6.3.
+35. Оптимизирована распаковка образов дисков, при которой используется преобразование в .iso.
+36. Убрана проверка на наличие опциональных распаковщиков  Expander.exe, xace.exe, kgb_arch_decompress.exe и pea.exe - эти файлы присутствуют в данном форке постоянно.
+37. Добавлена проверка на правильность использования ключа /lang.
+38. Оптимизирован скрипт. В том числе: check7z(), checkArj(), checkIE(), checkInno(), checkNSIS(), filescan(), diescan(), определение Microsoft CAB по расширению 'cab', обработка "ctar", "iscab" в extract() без использования debugfile; где возможно заменены конструкции If...ElseIf...Else...EndIf и Select...Case...EndSelect на Switch...Case...EndSwitch (https://www.autoitscript.com/forum/topic/16143-switch-vs-select-vs-if-else/ ; http://autoit-script.ru/index.php?topic=14445.0 ; http://forum.arduino.cc/index.php?topic=44519.0); определение списка языковых файлов перенесено в процедеру создания GUI.
+39. Обновлены English.ini, Russian.ini, Chinese (Simplified).ini .
+40. Исправлены мелкие ошибки.
+
+1.6.1.1019 (25/07/2016) mod by koros aka ya158
+Номер версии не менялся, т.к. сам Universal Extractor не изменился.
+1. Обновлен 7z.exe до версии 16.02, модифицированный для извлечения скрипта NSIS (спасибо dev2null)
+2. Обновлен Windows Installer XML Toolset Decompiler до версии 3.10.3.3007 (файлы wix\dark.exe и  wix\wix.dll, wix\wixcab.dll больше не нужен, winterop.dll перенесен в папку wix).
+
+1.6.1.1019 (22/07/2016) mod by koros aka ya158
+1. При админустановке инсталляторов msi из папки назначения не удаляется сам файл msi.
+2. Добавлено распаковка файлов .crx с помощью 7-zip. Файл *.CRX содержит расширения и плагины для браузера Google Chrome (скины, темы, дополнительный функционал).
+3. Обновлен Exeinfo PE до версии v0.0.4.2 Final - 941 + 46 signatures. Перенесен в папку bin\exeinfope со своим собственным userdb.txt
+4. Обновлен Detect-It-Easy до версии 1.01.
+5. Обновлен Less MSIerables (lessmsi) до версии 1.4. Внимание для его работы требуется .NET Framework v4.0.
+6. Обновлен 7-zip до версии 16.02, модифицированный для извлечения скрипта NSIS (спасибо dev2null).
+7. Обновлен Pea до версии 0.55
+8. Обновлен Total SQX до версии 2.11
+9. Обновлен TrID до версии 2.24 (база TrIDDefs.TRD 6972 Типов Файлов, 17.07.16)
+10. Обновлен ZPAQ до версии 7.14
+11. Обновлены модули для TotalObserver до версии 1.11.2 (взяты из плагина Observer для FAR)
+
+1.6.1.1018 (20/01/2016) mod by koros aka ya158
+1. Исправлена ошибка (появлялась при вызове диалога определения метода распаковки инсталляторов InstallShield)
+2. Обновлен перевод Chinese (Simplified)
+
+1.6.1.1017 (19/01/2016) mod by koros aka ya158
+1. Исправлена ошибка (не сохранялся выбор Exeinfo PE в Настройках)
+2. Добавлен ключ /lang для установки языка интерфейса Universal Extractor. Пример использования: UniExtract.exe /lang Russian
+3. Удален файл UniExtract.ini. При инсталляции, если в папке установки уже есть UniExtract.ini, то язык в нем меняется при помощи ключа на язык системы. Если же фыйла нет, то он создается с единственным параметром - language=%language% (%language% - язык ситемы)  
+4. Изменены параметры, задаваемые по умолчанию - подробнее см. UniExtract.au3.
+5. Добавлен распаковщик unshield v1.3 (скомпилирована с исправлениями участником конференции ru-board Tilks) для InstallShield CAB. Распаковщики InstallShield CAB теперь пробуются в следующем порядке (при неудачной распаковке проверяется следующий распаковщик): TotalObserver -> unshield -> i6comp -> i5comp
+6. Добавлен ключ -f в командную строку при запуске утилит i5comp/i6comp для распаковке с поддиректориями.
+7. Добавлена возможность распаковки образов vhd с помощью плагина 7-zip.
+8. Добавлена возможность распаковки инсталляторов InstallShield с ключами /s /extract_all:"<outdir>" и /a /s /v"/qn TARGETDIR=\"<outdir>\" (автор дополнения Amritius)
+9. Добавлено: При анализе EXE-файла теперь идет проверка на 7-ZIP SFX архив по фразе '7-ZIP'.
+10. Обновлен 7-zip до версии 15.14, модифицированный для извлечения скрипта NSIS.
+11. Обновлен Detect-It-Easy до версии 1.00.
+12. Обновлен innounp до версии 0.45.
+13. Обновлен i6comp до версии 0.3b 2011 года (удален ZD51145.DLL).
+14. Заменен распаковщик zoo архивов booz.exe на unzoo.exe v 4.5 2001/11/09.
+15. Обновлена база TrIDDefs.TRD: 6370 типов Файлов, 15.01.16
+16. При распаковке msi методом административной установки оригинальный файл теперь не копируется в папку назначения.
+17. Исправление мелких ошибок.
+
+1.6.1.1016 (30/12/1015) mod by koros aka ya158
+1. Добавлена возможность анализа исполняемых файлов с помощью Exeinfo PE v0.0.4.1 III - 902 + 35 signatures. После анализа с помощью trid.exe исполняемый файл анализируется следующими утилитами по очереди: Exeinfo, Detect-It-Easy, PEiD. Любую из них можно отключить через настройки Universal Extractor. По умолчанию включены все.
+2. Добавлена возможность распаковки mht, msi, Wise Installer, InstallShield Installer с помощью плагина TotalObserver к Total Commander.
+3. Добавлена возможность выбора распаковщика (TotalObserver.wcx или InstExpl.wcx) для Gentee Installer.
+4. Добавлена возможность выбора распаковщика (TotalObserver.wcx или InstExpl.wcx) для Setup Factory.
+5. Добавлена возможность распаковки MDF-образов Alcohol 120%, ISZ-образов UltraISO, NRG-образов Nero Burning ROM, BIN-образов и извлечения встроенных файлов из PDF с помощью TotalObserver.wcx.
+6. Добавлена возможность распаковки установочных пакетов Mac OS X *.pkg, образов диска Mac OS X *.dmg и архивов *.xar с помощью 7-zip.
+7. Добавлена возможность распаковки встроенные файлов из PDF с помощью TotalObserver.wcx.
+8. Добавлена распаковка файлов, которые определяются как "InstallShield CAB", с помощью TotalObserver.wcx. Если такая распаковка неудачна, то ппопытка распаковки с помощью i5comp.exe/i6comp.exe.
+9. Заменена распаковка файлов *.iso с помощью 7-zip на распаковку с помощью TotalObserver.wcx.
+10. Улучшена обработка путей к файлам с кириллическими символами.
+11. Вывод информационного окна при ошибки во время распаковки с помощью expand.exe.
+12. Добавлены ссылки на топики на Ru.Board и OSzone.net в меню "Помощь" основного окна Universal Extractor.
+
+1.6.1.1015 (01/12/2015) mod by koros aka ya158
+1. Удалено преобразование uniextract-*.txt -> uniextract_temp-*.txt -> uniextract-*.txt при неудачной распаковке.
+2. Обновлен перевод Chinese (Simplified)
+
+1.6.1.1014 (26/11/2015) mod by koros aka ya158
+Номер версии не менялся, т.к. сам Universal Extractor не изменился.
+1. Обновлен innounp до версии 0.44.
+2. Мелкие исправления
+
+1.6.1.1014 (23/11/2015) mod by koros aka ya158
+1. Обновлен 7-zip до версии 15.12, модифицированный для извлечения скрипта NSIS.
+2. Добавлена распаковка cab-файлов, получаемых после распаковки файлов msu.
+3. Удален Unrar (UnRAR.exe) - заменен на 7-zip.
+5. Обновлен MhtUnpack до версии 2.0
+6. Обновлен Pea до версии 0.51
+7. Обновлена база TrIDDefs.TRD: 6240 типов Файлов, 23.11.15
+
+1.6.1.1013 (05/10/2015) mod by koros aka ya158
+1. Добавлена возможность анализа исполняемых файлов с помощью Detect-It-Easy 0.99. Возможен выбор анализатора исполняемых файлов в Настройках.
+2. Изменение формирования основного окна программы.
+3. Добавлена проверка раздела реестра HKEY_CURRENT_USER\Software\PEiD до работы утилиты PEiD. Если данный раздел отсутствует до запуска PEiD, то после работы PEiD он удаляется.
+4. При анализе EXE-файла утилитой PEiD теперь идет проверка на NSIS-инсталлятор по фразе 'Nullsoft' вместо 'Nullsoft PiMP'.
+5. При анализе EXE-файла утилитой PEiD теперь идет проверка на Setup Factory по фразе 'Setup Factory' вместо 'Setup Factory 6.x'.
+6. При анализе EXE-файла утилитой PEiD теперь идет проверка на ZIP SFX по фразе 'ZIP' вместо 'ZIP SFX'.
+7. Изменен алгоритм проверки на то, что файл упакован с помощью UPX. Если при попытки распаковки с помощью UPX получается сообщение "CantUnpackException: file is modified/hacked/protected; take care!!!", то файл отправляется на повторную проверку без попыток распаковать его с помощью UPX.
+8. Обновлен userdb.txt
+9. Обновлен iso.wcx до версии 1.7.9
+10. Обновлен stuffit5.engine-5.1.dll до версии 5.1.6.582
+11. Обновлен unarc.exe до версии 0.67 alpha
+12. Обновлена база TrIDDefs.TRD: 6155 типов Файлов, 02.10.15
+13. Обновлен архиватор 7-zip до версии 15.08 beta
+
+1.6.1.1012 (13/09/2015) mod by koros aka ya158
+1. Изменен алгоритм распаковки исполняемых файлов с помощью UPX/AspackDie - распакованные файлы сохраняются теперь в папке назначения в любом случае.
+2. Исправлена ошибка, связанная с некорректным парсингом вывода 7-zip.exe.
+3. Обновлен 7-zip до версии 15.07 beta.
+4. Обновлен innounp до версии 0.43.
+5. Исправлена ошибка (неправильное отображения пункта "UniExtract to &Subdir" в контекстном меню файлов в английской версии)
+
+1.6.1.1011 (13/09/2015) mod by koros aka ya158
+1. Добавлена возможность распаковки msi-файлов с помощью плагина InstExpl.wcx к Total Commander.
+2. Изменен алгоритм проверки на то, что файл исполняемый файл упакован с помощью UPX или AspackDie. Теперь Universal Extractor после распаковки файла, упакованного с помощью UPX или AspackDie, повторно анализирует его и, при возможности, извлекает из него файлы. Если такое извлечение невозможно, то в папку назначения помещается распакованный с помощью UPX или AspackDie исполняемый файл с именем анализируемого файла, к которому добавлено "_TERM_UNPackED" (см. текущий языковой файл). Никаких запросо при этом не выдается.
+3. Исправлена ошибка, связанная с некорректным парсингом вывода cmdTotal.exe.
+
+1.6.1.1010 (25/07/2015) mod by koros aka ya158
+1. Изменен алгоритм поиска по сигнатуре. Сигнатура ищется только в начале и в конце файла (по умолчанию - по 10 мБ с начала и с конца). Можно задавать для каждого поиска отдельно.
+
+1.6.1.1009 (16/07/2015) mod by koros aka ya158
+1. Добавлена возможность корректного запуска нескольких копий Universal Extractor одновременно, для чего каждая копия создает свой собственный отладочный файл.
+
+1.6.1.1008 (08/07/2015) mod by koros aka ya158
+1. Изменена методика проверки на Caphyon Advanced Installer - к проверке на сигнатуру 0000E979FEFFFF добавлена проверка на сигнатуру 43617068796F6E (слово "Caphyon") и на сигнатуру 416476616E63656420496E7374616C6C6572 (слова "Advanced Installer").
+2. Проверка на Caphyon Advanced Installer перенесена в конец анализа exe-файлов.
+3. Добавлено информационное окно при тестировании на Caphyon Advanced Installer.
+
+1.6.1.1007 (06/07/2015) mod by koros aka ya158
+1. Изменена очередность проверки на Caphyon Advanced Installer, т.к. сигнатура 0000E979FEFFFF не однозначно указывает на Caphyon Advanced Installer.
+
+1.6.1.1006 (29/06/2015) mod by koros aka ya158
+1. Исправлена ошибка (был конфликт Less MSIerables (lessmsi) и Windows Installer XML Toolset Decompiler - для их работы требуются различные версии библиотеки wix.dll)
+
+1.6.1.1005 (24/06/2015) mod by koros aka ya158
+1. Изменена очередность проверок на Microsoft Visual C++ Redistributable версии старше 2010 и на Caphyon Advanced Installer.
+2. При анализе EXE-файла утилитой PEiD теперь идет проверка на NSIS-инсталлятор по фразе 'Nullsoft PiMP' вместо 'Nullsoft PiMP SFX'.
+3. Обновлен 7-zip до версии 15.05 beta
+4. Обновлен innounp до версии 0.42
+5. Обновлен Mhtunpack до версии 1.9.4
+6. Обновлен TrID до версии 2.20 (база TrIDDefs.TRD 5936 Типов Файлов, 15.06.15)
+7. Обновлен ZPAQ до версии 7.05
+8. Исправлена ошибка (не создавалась папка назначения, если существовал файл с именем папки назначения)
+
+1.6.1.1004 (14/05/2015) mod by koros aka ya158
+1. Утилита Aut2exe.exe вынесена в папку !!!Tools\bin Конструктора инсталляторов на основе модифицированного SFX модуля 7-Zip'а
+Номер версии не менялся, т.к. сам Universal Extractor не изменился.
+
+1.6.1.1004 (23/04/2015) mod by koros aka ya158
+1. Добавлено: Распаковка Microsoft Visual C++ Redistributable версии старше 2010.
+2. Добавлено: Распаковка файлов созданных Caphyon Advanced Installer.
+
+1.6.1.1003 (30/03/2015) mod by koros aka ya158
+1. Добавлено: Распаковка файлов sqx.
+2. Добавлено: Распаковка файлов zpaq.
+
+1.6.1.1002 (28/03/2015) mod by koros aka ya158
+1. Добавлена возможность извлечения SFX-модуля и файла конфигурации/комментария из SFX-архивов.
+2. Добавлен распаковщик msi-файлов Less MSIerables (lessmsi) (http://lessmsi.activescott.com/).
+3. Добавлена возможность определения файла по сигнатуре.
+4. Исправлены мелкие ошибки
+
+1.6.1.1001 (05/03/2015) mod by koros aka ya158
+1. Обновлены распаковщики/разархиваторы. Список можно увидеть в \docs\!!!Extractor.txt.
+2. Добавлена поддержка 64-битных систем. На таких системах устанавливается 64-битные версии части распаковщиков/разархиваторов. Uharc02.exe и BOOZ.EXE на таких системах не устанавливаются.
+3. Инсталлятор создается с помощью конструктора: http://forum.oszone.net/thread-295084.html
+4. Удалена возможность распаковывать из контекстного меню в ту же папку, в которой находится сам инсталлятор/архив. В контекстное меню "Отправить" добавлен пункт "Universal Extractor", который дает возможность распаковки через GUI.
+
+1.6.1.1000 (07/05/2013) mod by koros aka ya158
+1. Если при распаковки существует файл с именем, совпадающим с именем папки назначения, то предлагается на выбор:
+   1. К имени папки назначения добавить "_extracted"
+   2. Выбрать или создать другую папку
+   3. К имени папки назначения добавить текущие дату и время.
+2. Если при распаковки существует папка с именем, совпадающим с именем папки назначения, то предлагается на выбор:
+   1. Очистить эту папку и распаковать в неё
+   2. Выбрать или создать другую папку
+   3. Распаковать в эту папку без очистки.
+3. Выбор распаковщиков AspackDie. Потребность в этом описана здесь http://forum.oszone.net/post-1574340-352.html
+4. Исправление: При распаковке UPX-файла filename.exe  возникала ошибка, если существовал файл назначения "filename_unpacked.exe"
+5. Добавлены пункты меню настроек (ключи в настроечном файле UniExtract.ini) "Скрывать окно консоли" и "Минимизировать окно консоли"
+6. Добавлен распаковщик msi-файлов Simple "One-Click" MSI Unpacker (http://www.jsware.net/jsware/msicode.php5#unplin). Входящий в него скрипт адаптирован под Universal Extractor (спасибо [b]Alex_Piggy[/b] с руборда)
+7. Добавлен распаковщик FreeArc
+8. Добавлена проверка пароля инсталлятора Inno, архивов 7-zip, Rar и Zip. Если установлено "Скрывать окно консоли" или "Минимизировать окно консоли", то, при наличии пароля, это игнорируется и выводится нормальное окно консили с запросом пароля.
+9. Исправлено: При распаковке MSI при помощи плагина к TotalCommander-у была ошибка в оригинальном скрипте - вместо правильного $cabfiles[$i] было $cabfile[$i]
+10. Изменено: При анализе CHM-файла утилитой TrID теперь идет проверка по фразе '(.CHM) Windows HELP File' вместо 'Compiled HTML Help File'. 
+Аналогично дя HLP-файла проверяется фраза '(.HLP) Windows Help file'.
+11. Добавлено: При анализе EXE-файла утилитой PEiD теперь идет проверка на NSIS-инсталлятор по фразе 'Nullsoft PiMP SFX'. При распаковке в этом случае дубликаты автоматически преименовываются
+12. Изменено\добавлено: Убрано выделение bin\cue и nrg\cue в отдельную подгруппу (без проверки этих файлов с помощью TrID). Распаковка файлов, которые TrID определяет как 'ISO CDImage - universal format' с помощью плагина iso.wcx к TotalCommander-у. Удаляются файлы bin2iso*.* и nrg2iso*.*
+13. Добавлено: Распаковка файлов msu - пакеты обновлений Windows по аналогии с распаковкой msp-файлов методом 7-zip.
+14. Изменено: Файлы образов дискет (.img) распаковываются не утилитой Extract 2.10, а 7-zip-ом. Удаляются файлы Extract*.*
+
+1.6.1 (05/12/2010):
+
+  Added support for environmental variables (eg., specify %temp% for debug dir)
+  Added support for XZ compressed files and txz/tlz archives via 7-Zip
+  Added support for Windows Installer merge modules (.msm) via MsiX
+  Added support for NBH files via NBHextract
+  Added translations for Armenian, Czeck, Persian (Farsi), Serbian, Swedish
+  Changed 7-Zip unpacking behavior;
+          now attempts brute force extraction only after External PEiD scan;
+          change due to aggressive .exe resource extraction in new versions
+  Changed Windows installer support (.msi, .msp) to use MsiX instead of msi2xml
+  Changed LZMA support to use 7-Zip for extraction
+  Changed FEAD support to use PEiD rather than TrID for detection
+  Changed following formats to call 7z by name (also see 7-Zip debug comment):
+          bz2, chm, gz, tar, Z
+		  this is mostly for code cleanup; functionality should be the same
+  Fixed InstallShield 5.x regression in 1.6 preventing successful extraction
+  Fixed bug in extraction of non-TAR LZW compressed files
+  Fixed bug that prevented picking files after toggling history option
+  Fixed bug in display of history combo boxes when no items listed
+  Fixed cosmetic bug in Visual C++ SFX status dialog
+  Fixed cosmetic bug in status dialogs due to extra padding by AutoIt
+  Removed lzma helper binary
+  Removed msi2xml helper binary and MSXML download link on MSI selection page
+  Removed Windows NT 4.0 support from installer
+  Removed debug output for 7-Zip, arj, hlp;
+          buffers output, preventing proper user feedback and input prompts
+  Updated success/fail detection to check output directory timestamp;
+          can detect cases where files are overwritten, which old method missed;
+          will still consider failed if user chooses not to overwrite files,
+          or if all files are written to a subdirectory of the output directory
+  Updated RPM and DEB support to extract interim CPIO and TAR files
+  Updated FEAD support to workaround read-only permission issue
+  Updated Zip support to log unzip output and permit minor reported unzip errors
+  Updated PEiD detection of Microsoft SFX cab files for more reliable extraction
+  Updated some UniExtract window sizes for better internationalization support
+  Updated translations for Italian, Korean, Russian
+  Updated 7-Zip to 9.13 beta
+  Updated AutoIt to 3.3.6.1 and replaced deprecated _ArrayCreate UDF
+  Updated InfoZip unzip to 6.0.0
+  Updated Inno Setup to 5.3.9
+  Updated innounp to 0.31 (supports Inno Setup 5.3.9)
+  Updated InstallExplorer WCX to 0.9.2
+  Updated MSI WCX to 1.2.1
+  Updated PEiD to 0.95
+  Updated UnRAR to 3.93
+
+
+1.6 (10/17/2008):
+
+  Added support for individual user preferences for better Vista support;
+        by default, this is enabled for standalone, disabled for installed
+        when enabled, UniExtract uses single .ini file as with previous version
+        when disabled, individual prefs/history are saved to registry in HKCU
+        this can be changed by modifying globalprefs setting in .ini file
+  Added menu bar to main GUI;
+        includes options to quit, edit preferences, and visit UniExtract website
+  Added separate preferences GUI to provide easy access to all options;
+        can be invoked through Edit menu or through '/prefs' argument
+  Added support for DiscJuggler CDI CD-ROM images via cdirip.exe
+  Added support for FEAD Optimizer packages (eg, Adobe Reader installers)
+  Added support for LZMA compressed files via lzma
+  Added support for LZX compressed files via unlzx
+  Added support for Nero NRG CD-ROM images (data only) via nrg2iso
+  Added support for Reflexive Arcade installer wrapper via RAIU
+  Added support for RoboForm installers
+  Added support for WIM (Windows Imaging Format) images via 7-Zip
+  Added "Not an InstallShield installer" option to InstallShield method select
+        dialog to force UniExtract to handle TrID InstallShield false positives
+  Added components section to installer; makes installation of
+        docs, languages, and certain (large) binaries optional
+  Added SendTo icon option to installer
+  Added internationalization support for decompressed ASPack and UPX files
+  Added Croatian, Dutch, Hungarian, Portuguese, Romanian, Taiwanese, Turkish,
+        and Valencian (Catalan) translations
+  Added return codes to indicated status of extraction (actually added in 1.5):
+        0 = successful exit or user-initiated cancel
+        1 = supposedly supported file, but extraction failed
+        2 = debug file is not writable, aborted
+        3 = unknown executable - cannot be extracted
+        4 = unknown filetype - cannot be extracted
+        5 = invalid output directory specified
+  Fixed bug that displayed debugging message box during Inno Setup extraction
+  Fixed bug in InstallShield CAB file support; now properly extracts files
+        with spaces in the filename
+  Fixed support for (non-tar) gzip files
+  Fixed support for Microsoft hotfixes (again)
+  Fixed support for relative paths
+  Fixed support for UNC paths
+  Fixed missing Spanish language option during installation
+  Removed support for Windows 9x due to new Unicode version of AutoIt;
+          9x was never officially supported, but it will not even execute now
+  Removed Adobe-specific report (now handled by generic FEAD support)
+  Updated UniExtract to prompt user before executing files for extraction;
+          can be disabled via warnexecute option
+  Updated UniExtract to make ACE, KGB, Pea, and StuffIt support optional
+  Updated UniExtract to read English.ini from root install directory
+  Updated UniExtract to output debug files to %temp% by default
+  Updated UniExtract to verify that debug file location can be written to;
+          user's temp directory will be used if selected dir fails test
+  Updated UniExtract to disable appendext option by default
+  Updated UniExtract changelog to add notice of Vietnamese translation in 1.5
+  Updated TrID detection of MS Self-Extracting CAB (Type 1) archives
+  Updated TrID detection of Windows Installer (MSI) packages
+  Updated TrID detection of Zip Self-Extracting archives
+  Updated CD-ROM image support to bypass TrID detection and rely on extensions
+  Updated Inno Setup support for increased detection reliability
+  Updated Inno Setup support to extract all files, including renamed duplicates
+  Updated UHARC support to detect and extract SFX files
+  Updated Windows Installer patch (.msp) to include pure 7-zip option
+  Updated installer to use Start Menu icons page and include uninstall icon
+  Updated installer language initialization code for simplicity
+  Updated installer to require administrative privileges;
+          non-admin users should use binary archive (portable) version,
+          or use a copy installed by the system administrator
+  Updated installer to require Windows NT-based systems; 9x will not work
+  Updated installer to prevent association with CHM files under Vista
+  Updated installer to support new /nowarnexecute paramater
+  Updated installer to support reversed appendext default preference;
+          now use /appendext to enable instead of /noappendext to disable
+  Updated installer to add {app} in addition to {app}\bin to %PATH% if enabled;
+          restores ability easily to call UniExtract.exe from command line
+  Updated 7-Zip to 4.57
+  Updated AutoIt to 3.2.10.0
+  Updated innounp to 0.20
+  Updated Inno Setup to 5.2.2
+  Updated msi2xml to 2.2.1.957
+  Updated Pea to 1.6 (cannot use newer version due to broken GUI controls)
+  Updated UnRAR to 3.80
+  Updated UPX to 3.03
+  Updated bin2iso to 1.95
+
+
+1.5 (02/22/2007):
+
+  Added filetype signature scanning via TrID; no longer dependent on extensions
+  Added support for Adobe Reader 7.x and 8.x installers
+  Added support for Base64, Quoted-Printable, UUencoded, and yEnc files
+        via uudeview
+  Added support for Gentee, Installer VISE, and SetupFactory installers
+        via cmdTotal + InstallExplorer
+  Added support for InstallShield 3.x SFX installers via stix
+  Added support for InstallShield 5.x CAB files via i5comp
+  Added support for Itsy packages (.ipk)
+  Added support for Outlook Express (DBX) archives via cmdTotal + DBX Plugin
+  Added support for Pea archives
+  Added support for SIS (SymbianOS) installers via cmdTotal + PDunSIS
+  Added support for StuffIt packages (.sit, but not .sitx)
+  Added support for Windows Installer patch (.msp) files via 7-zip and
+        cmdTotal + MSI Plugin
+  Added support for Zoo archives via booz
+  Added support for files without an extension (eg, unknown files)
+  Added /noappendext, /noremovedupe, /noremovetemp parameters to installer
+  Added .dbx, .msp, .pea, and .sit file associations to installer
+  Added Polish, Russian, Slovak, Spanish, and Vietnamese translations
+  Fixed bug that prevented extraction of UPXed Zip and 7-Zip installers
+  Fixed bug in Inno Setup installer detection
+  Fixed potential file output bug in some installers, mainly InstallShield
+  Fixed ACE SFX error handling to continue processing if extraction fails
+  Fixed InstallShield cache mode handling to prevent hangs
+  Removed 'i6comp by group' option for InstallShield cabs
+  Removed expand.exe in favor of using 7-Zip for Microsoft Compressed files
+  Removed .in_, .oc_, .sr_, .1, .bin, .imf, .lib, and .wz file associations
+          from installer
+  Updated UniExtract to scan signatures by default; extensions used as backup
+  Updated UniExtract to display icon in system tray during extraction
+  Updated UniExtract to select Cancel by default on PEiD and log prompts
+  Updated UniExtract internationalization support to simplify translation
+  Updated UniExtract with many code changes to increase robustness, simplicity,
+          and efficiency wherever possible
+  Updated support for Inno Setup, NSIS, Wise Installer, and InstallShield
+          via cmdTotal + InstallExplorer
+  Updated ACE support to include non-PE ACE SFX archives
+  Updated BIN/CUE support with better conversion support and validation
+  Updated InstallShield 3.x archives support by adding STIX extraction option
+  Updated InstallShield CAB support to display progress dialog
+  Updated InstallShield cache extraction to support multiple nested MSIs
+  Updated InstallShield cache extraction to better detect installer window
+  Updated InstallShield support to provide choice of isxunpack or cache mode
+  Updated MHTML support to include option for extraction via
+          cmdTotal + MHT Packer Plugin
+  Updated Wise Installer support to include non-PE Wise installers
+  Updated Wise Installer support to include unzip option
+  Updated Wise Installer support to append missing file extensions
+  Updated Wise Installer support to provide option for removing temporary files
+  Updated Microsoft SFX CAB support for better detection and robustness
+  Updated Windows Installer support to append missing file extensions
+  Updated Windows Installer support to include option for extraction via
+          cmdTotal + MSI Packer Plugin
+  Updated AutoIt to 3.2.2.0
+  Updated bin2iso to 1.95
+  Updated Inno Setup to 5.1.9
+  Updated UnRAR to 3.62
+
+
+1.4.2 (11/28/2006):
+
+  Added preferences page to installer to set defeault UniExtract options
+  Added multilingual support to installer (using Inno Setup message files)
+  Added multilingual support for context menu entries and installer messages
+  Added Chinese (Traditional), Italian, Japanese, and Thai translations
+  Fixed UniExtract crash when selecting archive file to extract through GUI
+  Fixed support for Windows Installer 2.0
+  Fixed combo box bug in history and language lists under Windows 9x
+  Fixed path issue under Windows 9x
+  Fixed translation error for KGB Self-Extracting archives
+  Updated installer to Admin or Power User for context menu association
+  Updated innounp to 0.18
+  Updated Inno Setup installer to 5.1.8
+  Updated Inno Setup CLI Help to 1.1
+  Updated Chinese (Simplified) translation
+  Updated UniExtract to display status box higher on screen to prevent overlap
+
+
+1.4.1 (11/21/2006):
+
+  Added Chinese (Simplified), French, and German translations
+  Fixed bug in directory selection when archive name is passed to uniextract
+  Fixed .imf file association in installer
+  Updated UniExtract to allow dynamic GUI language selection
+  Updated UniExtract to allow dynamic GUI control positioning
+  Updated UniExtract to prevent 100% CPU utilization during GUI display
+
+
+1.4 (11/18/2006):
+
+  Added support for internationalization
+  Added option to disable history
+  Added option to specify location for debug file
+  Added ability to display log file if extraction fails
+  Added /d switch to @comspec calls to disable AutoRun conflicts
+  Added support for LIT (Microsoft ebook) files
+  Added support for Office 2007 beta installer
+  Added minor code optimizations
+  Changed UniExtract.exe to run from base directory rather than bin\
+  Changed UniExtract.exe to use .ini file for history rather than registry
+  Fixed typo in installer
+  Updated .exe file scanning process to speed up extraction
+  Updated installer to only offer system path option to Admin or Power Users
+  Updated KGB decompressor to 1.2.1.24
+  Updated UPX to 2.0.3
+
+
+1.3.1 (09/27/2006):
+
+  Added Start Menu, Dersktop, Quick Launch icon options to installer
+  Fixed 7-Zip and InfoZip checks on unknown executables
+  Fixed 7-Zip extraction - now bypasses user input to prevent program hangs
+  Fixed Windows 9x compatability issues
+  Fixed .wz file association
+  Updated InstallShield support to recognize additional installers
+  Updated UnRAR to 3.61
+
+
+1.3 (09/15/2006):
+
+  Added support for UHARC archives
+  Added support for KGB archives, including encrypted and SFX archives
+  Added support for MHTML (.mht) files
+  Added support for Wise for Windows Installer installers
+  Added support for InstallShield 3.x archives (.z, .1, and .lib) via i3comp
+  Added support for decompressing UPX and ASpack files, including .dll files
+  Added additional support for MSI files
+  Added additional scanning options for PEiD
+  Added external database support for PEiD
+  Added ability to choose context menu items in installer
+  Added support for compressed files (.??_) to installer
+  Added command line usage information to installer (run with /?)
+  Added support for McAfee SuperDAT updater and CMenu installer
+  Fixed support for Microsoft hotfixes
+  Fixed miscellaneous typos
+  Fixed RPM file association in installer
+  Fixed miscellaneous file association bugs in installer
+  Updated PEiD to 0.94
+  Updated 7-zip to 4.42 (still using 4.40 nsis.dll)
+  Updated UnRAR to 3.60
+  Updated Inno Setup unpacking to include embedded files
+  Updated Inno Setup support to include newer versions
+  Updated InstallShield support to include support files with cache option
+  Updated file scanning to speed up filetype detection
+  Updated Zip support to include files compressed with bzip2
+  Updated Zip support to include .wz extension
+  Updated Microsoft CAB support to include .imf extension
+  Updated Wise and InstallShield filetype detection for accuracy
+
+
+1.2.1 (05/03/2006):
+
+  Fixed bug in Wise Installer support
+
+
+1.2 (05/02/2006):
+
+  Added preliminary support for NSIS installers
+  Added support for new-style MS SFX installers
+  Fixed potential bug in InstallShield  cache method extraction
+  Updated 7-zip to 4.40 beta
+
+
+1.1 (04/20/2006):
+
+  Added support for ISO CD-ROM images, including boot image extraction
+  Added support for BIN/CUE CD-ROM images
+  Added support for IMG disk images
+  Added GUI file and directory history
+  Added GUI drag-and-drop support
+  Fixed i6comp bug for InstallShield CAB files
+  Updated installer to add UniExtract hooks to all supported formats
+  Updated GUI default directory selection behavior
+  Updated 7-zip to 4.39 beta
+  Updated AutoIt to 3.1.1.119 beta
+
+
+1.0 (01/16/2006):
+
+  Added GUI for file and directory selection
+  Added ability to specify destination directory
+  Added proper file association options to installer
+  Added multiple methods for extracting Wise Installer packages
+  Added multiple methods for extracting InstallShield Installer packages
+  Added syntax help (UniExtract.exe /help)
+  Added additional checks for supported, but unidentified, executables
+  Added better output validation
+  Added support for .001 RAR archives and .xpi ZIP archives
+  Fixed hang error when scanning .exe files
+  Fixed registry key causing long file name problems with context integration
+  Updated 7-Zip to 4.32
+  Updated HWUN to WUN 0.90a
+  Updated Is7unpack to IsXunpack 0.99
+
+
+0.8 (12/06/2005):
+
+  Initial release
